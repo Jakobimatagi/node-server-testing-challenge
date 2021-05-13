@@ -2,8 +2,10 @@
   "name": "node-server-testing",
   "version": "1.0.0",
   "description": "Node Server Testing Challenge",
+  "main": "server.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "cross-env DB_ENV=testing jest --watch",
+    "server": "nodemon index.js"
   },
   "jest": {
     "testEnvironment": "node"
@@ -12,13 +14,24 @@
     "type": "git",
     "url": "git+https://github.com/LambdaSchool/node-server-testing.git"
   },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/node-server-testing/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/node-server-testing#readme",
   "devDependencies": {
-    "eslint": "^7.13.0",
-    "jest": "^26.6.3",
-    "supertest": "^6.0.1"
+    "cross-env": "^7.0.3",
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "init": "^0.1.2",
+    "knex": "^0.21.19",
+    "nodemon": "^2.0.4",
+    "pg": "^8.6.0",
+    "sqlite3": "^5.0.0"
   }
 }
